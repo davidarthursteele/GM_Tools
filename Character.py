@@ -52,13 +52,13 @@ class Character(object):
     
     def knowledge_skills_txtstr(self):
         string = "Knowledge Skills\n"
-        for skill in sorted(BJ.knowledge_skills.keys()):
+        for skill in sorted(self.knowledge_skills.keys()):
             string += "  " + skill + (" " * (34 - len(skill))) + " " + self.knowledge_skills[skill][1] + "\n"
         return string
     
     def language_skills_txtstr(self):
         string = "Language Skills\n"
-        for skill in sorted(BJ.language_skills.keys()):
+        for skill in sorted(self.language_skills.keys()):
             string += "  " + skill + (" " * (34 - len(skill))) + " " + self.language_skills[skill][1] + "\n"
         return string
     
@@ -160,7 +160,7 @@ def importsr3(filename, player_name = "Unknown"):
     return char
 
 
-if __name__ == "__main__":
-    BJ = importsr3("bj.sr3", "BJ")
-    BJ.character_name = "Mecha T"
-    BJ.export_to_txt()
+#if __name__ == "__main__":
+#    BJ = importsr3("bj.sr3", "BJ")
+#    BJ.character_name = "Mecha T"
+#    BJ.export_to_txt()
